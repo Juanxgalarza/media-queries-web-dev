@@ -1,0 +1,83 @@
+:root {
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --unidad-primaria: 5rem;
+  --unidad-secundaria: 2rem;
+
+}
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+
+
+
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+   background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+   background: #6649b8;
+}
+
+main {
+  margin-left: var(--unidad-primaria);
+  padding: 1rem;
+}
+.navbar {
+  width: var(--unidad-primaria);
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+}
+.text-link {
+
+}
+h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+.nav-item {
+  width: 100%;
+}
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.navbar-nav:last-child {
+  margin-top: auto;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.juanPic {
+  border: 1px;
+  border-radius: 50%;
+  width: 50%;
+  max-width: 50%
+  height: 50%;
+  padding: 0;
+  margin: 0;
+}
