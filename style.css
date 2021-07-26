@@ -3,6 +3,7 @@
   font-family: 'Noto Sans JP', sans-serif;
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
+  --icon-hover: #1414ff;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --unidad-primaria: 4rem;
@@ -34,20 +35,21 @@ main {
   padding: 1rem;
 }
 .navbar {
-  width: var(--unidad-primaria);
-  height: 100vh;
+
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 250ms ease;
+  transition: width 251ms ease;
 }
 .text-link {
 
 }
 h1 {
   font-family: 'Noto Sans JP', sans-serif;
-  margin: 0;
+  font-weight: bold;
+  margin-bottom: 1rem;;
   padding: 0;
   text-align: left;
+  letter-spacing: 0.01ch;
 
 
 }
@@ -78,7 +80,7 @@ p {
   height: var(--unidad-primaria);
   color: var(--text-primary);
   text-decoration: none;
-  /*filter: grayscale(100%) opacity(0.6);*/
+  filter: grayscale(100%) opacity(0.6);
   transition: var(--vel-transición)
 }
 .nav-link:hover {
@@ -98,23 +100,49 @@ p {
   margin: 0 1.5rem;
 
 }
-.navbar:hover {
+
+/*
+  ESTA PORCIÓN DE CODIGO CORRESPONDE A LA MEDIA QUERY PARA PANTALLAS GRANDES
+navbar:hover {
   width: 10rem;
 }
 .navbar:hover .link-text {
-  display: block;
+  display: inline;
+  transition: opacity var(--vel-trancisión)
 }
-
-.
-
+*/
 
 .fas {
 transition: var(--vel-transición)
 color: #ff7eee;
 }
+.fas fa-code {
+  transform: rotate(0deg);
+  transition: transform var(--vel-trancisión);
 
-
-
+}
+.fas:hover fa-code {
+  transform: rotate(-180deg);
+  transition: transform var(--vel-trancisión);
+}
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+.logo i {
+  transform: ;
+  transform: rotate(0deg);
+  transition: transform var(--vel-trancisión)
+}
+.navbar:hover .logo i {
+  transform: rotate(-180deg);
+}
 .juanPic {
   border: 1px;
   border-radius: 50%;
@@ -130,4 +158,45 @@ color: #ff7eee;
 .tituloGen {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: bold;
+}
+
+
+
+/*Animación para celulares (pantalla chiquita)*/
+@media only screen and (max-width: 600px) {
+.navbar {
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+}
+.logo {
+  display: none;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.nav-link {
+  justify-content: center;
+}
+main {
+  margin: 0;
+}
+}
+/*Animación para pantalla grande)*/
+@media only screen and (min-width: 600px) {
+.navbar {
+  top: 0;
+  width: var(--unidad-primaria);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar:hover {
+  width: 10rem;
+}
+.navbar:hover .link-text {
+  display: inline;
+  transition: opacity var(--vel-trancisión)
+}
+
 }
