@@ -5,8 +5,9 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --unidad-primaria: 5rem;
+  --unidad-primaria: 4rem;
   --unidad-secundaria: 2rem;
+  --vel-trancisión: 600ms;
 
 }
 body {
@@ -37,6 +38,7 @@ main {
   height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
+  transition: width 200ms ease;
 }
 .text-link {
 
@@ -45,15 +47,15 @@ h1 {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
+  text-align: left;
+
 
 }
 p {
   font-family: 'Noto Sans JP', sans-serif;
 
 }
-.nav-item {
-  width: 100%;
-}
+
 .navbar-nav {
   list-style: none;
   padding: 0;
@@ -63,6 +65,9 @@ p {
   align-items: center;
 
 }
+.nav-item {
+  width: 100%;
+}
 
 .navbar-nav:last-child {
   margin-top: auto;
@@ -70,14 +75,59 @@ p {
 .nav-link {
   display: flex;
   align-items: center;
+  height: var(--unidad-primaria);
+  color: var(--text-primary);
+  text-decoration: none;
+  /*filter: grayscale(100%) opacity(0.6);*/
+  transition: var(--vel-transición)
 }
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+.nav-link i {
+  min-width: var(--unidad-secundaria);
+  margin: 0 1.5rem;
+
+}
+.navbar:hover {
+  width: 10rem;
+}
+.navbar:hover .link-text {
+  display: block;
+}
+
+.
+
+
+.fas {
+transition: var(--vel-transición)
+color: #ff7eee;
+}
+
+
 
 .juanPic {
   border: 1px;
   border-radius: 50%;
-  width: 50%;
-  max-width: 50%
+  display: block;
+ max-width:230px;
+ max-height:95px;
+  width: auto;
+  height: auto;
   height: 50%;
   padding: 0;
   margin: 0;
+}
+.tituloGen {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
 }
