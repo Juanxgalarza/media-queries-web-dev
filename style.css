@@ -11,15 +11,34 @@
   --vel-trancisión: 600ms;
 
 }
+.css-selector {
+    background: linear-gradient(270deg, #ffeecc, #fedb96, #ffc85d, #c3a977);
+    background-size: 800% 800%;
 
+    -webkit-animation: AnimationName 60s ease infinite;
+    -moz-animation: AnimationName 60s ease infinite;
+    animation: AnimationName 60s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 body {
   color: black;
-  background-color: #ffeecc;
   margin: 0;
   padding: 0;
-
-
-
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -36,7 +55,6 @@ main {
   padding: 1rem;
 }
 .navbar {
-
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 251ms ease;
@@ -166,6 +184,15 @@ color: #ff7eee;
 .infoGen {
   font-family: 'Merriweather', serif;
   font-weight: bold;
+}
+.infoGenBottom {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+.contactoList {
+padding: 16rem;
+
 }
 
 
